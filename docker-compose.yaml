@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   video_streaming_server:
-    build: .
+    build: .              # Build the Dockerfile in the current directory
     ports:
-      - "5000:5000"
+      - "5000:5000"       # Expose port 5000
     volumes:
-      - ./videos:/videos
+      - /home/tom/videos:/videos  # Mount host videos directory into the container
